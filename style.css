@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+body{
+    background-color: rgb(105, 143, 143);
+    width: 100%;
+}
+.wrapper{
+    max-width:55%;
+    margin:10% auto;
+    border-radius:  2%;
+    height: 50vh;
+}
+.wrapper input{
+    opacity: 0;
+}
+.slider{
+    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+    position: relative;
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+}
+.slides{
+    height: inherit;
+    width: inherit;
+    transform: scale(1.2);
+    
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+.slide1{
+    background-image:url(./images/gif6.jpg)
+}
