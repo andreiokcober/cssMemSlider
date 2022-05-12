@@ -66,23 +66,24 @@ body{
 .slide5 {
     background: url(./images/gif1.jpg) no-repeat center center
 } */
-.wrapper label{
+label{
     cursor: pointer;
-    display: inline-block;
-    height: 1rem;
-    width: 1rem;
-    margin-left: 0.3rem;
-    border-radius: 1rem;
-    background: var(--bg-label);
-    transition: background ease-in-out .2s;
+    height: 2.2rem;
+    width: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-.wrapper label:hover{
+.wrapper label:hover .control-item{
 background:var(--bg-label-hover);
+
+
 }
-.wrapper #slide1:checked~.controll-wrapper .controls label:hover,
-.wrapper #slide2:checked~.controll-wrapper .controls label:hover,
-.wrapper #slide3:checked~.controll-wrapper .controls label:hover,
-.wrapper #slide4:checked~.controll-wrapper .controls label:hover{
+.wrapper #slide1:checked~.controll-wrapper .controls label:hover .control-item,
+.wrapper #slide2:checked~.controll-wrapper .controls label:hover .control-item,
+.wrapper #slide3:checked~.controll-wrapper .controls label:hover .control-item,
+.wrapper #slide4:checked~.controll-wrapper .controls label:hover .control-item{
     border: 0.1rem solid #fff;
     transition: border ease-in-out .1s;
 }
@@ -91,14 +92,21 @@ background:var(--bg-label-hover);
     display: flex;
     justify-content: space-between;
 }
-.controls:hover{
-    cursor: pointer;
+.control-item{
+    
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background: var(--bg-label);
+    transition: background ease-in-out .2s;
 }
-#slide1:checked~.controll-wrapper .controls label:nth-of-type(1),
-#slide2:checked~.controll-wrapper .controls label:nth-of-type(2),
-#slide3:checked~.controll-wrapper .controls label:nth-of-type(3),
-#slide4:checked~.controll-wrapper .controls label:nth-of-type(4),
-#slide5:checked~.controll-wrapper .controls label:nth-of-type(5) {
+.controls{
+    display: flex;
+}
+#slide1:checked~.controll-wrapper .controls label:nth-of-type(1) .control-item,
+#slide2:checked~.controll-wrapper .controls label:nth-of-type(2) .control-item,
+#slide3:checked~.controll-wrapper .controls label:nth-of-type(3) .control-item,
+#slide4:checked~.controll-wrapper .controls label:nth-of-type(4) .control-item{
     border: 0.1rem solid var(--bg-label);
     background:none;
 }
