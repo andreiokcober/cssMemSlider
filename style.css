@@ -7,18 +7,19 @@
 body{
     background-color: rgb(105, 143, 143);
     width: 100%;
+
 }
 .wrapper{
-    max-width:55%;
-    margin:10% auto;
+    max-width: 40rem;
+    margin: 3% auto;
     border-radius:  2%;
-    height: 50vh;
+    height: 55vh;
 }
 .wrapper input{
     opacity: 0;
 }
 .slider{
-    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+    box-shadow: 0 0 5rem rgb(0 0 0 / 50%);
     position: relative;
     overflow: hidden;
     height: inherit;
@@ -27,10 +28,56 @@ body{
 .slides{
     height: inherit;
     width: inherit;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     
     transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 .slide1{
-    background-image:url(./images/gif6.jpg)
+    background:url(./images/gif6.jpg) no-repeat center center
+}
+.slide2 {
+    background: url(./images/gif5.jpg) no-repeat center center
+}
+.slide3 {
+    background: url(./images/gif4.jpg) no-repeat center center
+}
+.slide4 {
+    background: url(./images/gif3.jpg) no-repeat center center
+}
+.slide5 {
+    background: url(./images/gif1.jpg) no-repeat center center
+}
+.wrapper label{
+    cursor: pointer;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-left: 0.3rem;
+    border-radius: 1rem;
+    background: #373766;
+    transition: background ease-in-out .2s;
+}
+.wrapper label:hover{
+background:#fff;
+}
+.wrapper #slide1:checked~.controll-wrapper .controls label:hover,
+.wrapper #slide1:checked~.controll-wrapper .controls label:hover,
+.wrapper #slide1:checked~.controll-wrapper .controls label:hover,.wrapper #slide1:checked~.controll-wrapper .controls label:hover
+.wrapper #slide1:checked~.controll-wrapper .controls label:hover,
+.wrapper #slide1:checked~.controll-wrapper .controls label:hover{
+    border: 0.1rem solid #fff;
+    transition: border ease-in-out .1s;
+}
+.controll-wrapper{
+    margin-top:2rem;
+    display: flex;
+    justify-content: space-between;
+}
+#slide1:checked~.controll-wrapper .controls label:nth-of-type(1),
+#slide2:checked~.controll-wrapper .controls label:nth-of-type(2),
+#slide3:checked~.controll-wrapper .controls label:nth-of-type(3),
+#slide4:checked~.controll-wrapper .controls label:nth-of-type(4),
+#slide5:checked~.controll-wrapper .controls label:nth-of-type(5) {
+    border: 0.1rem solid #373766;
+    background:none;
 }
