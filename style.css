@@ -8,9 +8,17 @@
     --margin-top-slide2:-21.83rem;
     --margin-top-slide3: -43.66rem;
     --margin-top-slide4: -65.491rem;
+    --body-bg:rgb(105, 143, 143);
+    --bg-label:#373766;
+    --bg-label-hover:#fff;
+    --bg-item-text:#f0d9d9;
+    --margin-text-item1:-2.2rem;
+    --margin-text-item2:-4.4rem;
+    --margin-text-item3:-6.6rem;
+    
 }
 body{
-    background-color: rgb(105, 143, 143);
+    background-color: var(--body-bg);
     width: 100%;
 
 }
@@ -25,6 +33,7 @@ body{
 }
 .slider{
     box-shadow: 0 0 5rem rgb(0 0 0 / 50%);
+    border-radius: 0.5rem;
     position: relative;
     overflow: hidden;
     height: inherit;
@@ -33,7 +42,6 @@ body{
 .slides{
     height: inherit;
     width: inherit;
-    /* transform: scale(1.2); */
     opacity: 0;
     transition: transform ease-in-out .5s, opacity ease-in-out .5s,margin ease-in-out .5s ;
 }
@@ -59,17 +67,16 @@ body{
     width: 1rem;
     margin-left: 0.3rem;
     border-radius: 1rem;
-    background: #373766;
+    background: var(--bg-label);
     transition: background ease-in-out .2s;
 }
 .wrapper label:hover{
-background:#fff;
+background:var(--bg-label-hover);
 }
 .wrapper #slide1:checked~.controll-wrapper .controls label:hover,
-.wrapper #slide1:checked~.controll-wrapper .controls label:hover,
-.wrapper #slide1:checked~.controll-wrapper .controls label:hover,.wrapper #slide1:checked~.controll-wrapper .controls label:hover
-.wrapper #slide1:checked~.controll-wrapper .controls label:hover,
-.wrapper #slide1:checked~.controll-wrapper .controls label:hover{
+.wrapper #slide2:checked~.controll-wrapper .controls label:hover,
+.wrapper #slide3:checked~.controll-wrapper .controls label:hover,
+.wrapper #slide4:checked~.controll-wrapper .controls label:hover{
     border: 0.1rem solid #fff;
     transition: border ease-in-out .1s;
 }
@@ -78,12 +85,15 @@ background:#fff;
     display: flex;
     justify-content: space-between;
 }
+.controls:hover{
+    cursor: pointer;
+}
 #slide1:checked~.controll-wrapper .controls label:nth-of-type(1),
 #slide2:checked~.controll-wrapper .controls label:nth-of-type(2),
 #slide3:checked~.controll-wrapper .controls label:nth-of-type(3),
 #slide4:checked~.controll-wrapper .controls label:nth-of-type(4),
 #slide5:checked~.controll-wrapper .controls label:nth-of-type(5) {
-    border: 0.1rem solid #373766;
+    border: 0.1rem solid var(--bg-label);
     background:none;
 }
 #slide1:checked~.slider>.slide1,
@@ -99,11 +109,34 @@ background:#fff;
     
 }
 #slide2:checked~.slider>.slide2{
-    margin-top: var(--margin-top-slide2)
+    margin-top: var(--margin-top-slide2);
 }
 #slide3:checked~.slider>.slide3{
-    margin-top:var(--margin-top-slide3)
+    margin-top:var(--margin-top-slide3);
 }
 #slide4:checked~.slider>.slide4 {
-    margin-top: var(--margin-top-slide4)
+    margin-top: var(--margin-top-slide4);
 }
+.controll-text-item {
+    color: var(--bg-item-text);
+    margin-bottom:1rem;
+    opacity: 0;
+    transition: opacity ease-in-out .5s, margin ease-in-out .5s
+}
+#slide1:checked~.controll-wrapper .item1{
+    opacity: 1;
+}
+#slide2:checked~.controll-wrapper .item2 {
+    opacity: 1;
+    margin-top: var(--margin-text-item1);
+}
+#slide3:checked~.controll-wrapper .item3 {
+    opacity: 1;
+    margin-top: var(--margin-text-item2);
+}
+#slide4:checked~.controll-wrapper .item4 {
+    opacity: 1;
+    margin-top: var(--margin-text-item3);
+}
+
+
