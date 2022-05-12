@@ -5,9 +5,9 @@
     font-size: 1rem;
 }
 :root{
-    --margin-top-slide2:-21.83rem;
-    --margin-top-slide3: -43.66rem;
-    --margin-top-slide4: -65.491rem;
+    --margin-top-slide2:-25rem;
+    --margin-top-slide3: -50rem;
+    --margin-top-slide4: -75rem;
     --body-bg:rgb(105, 143, 143);
     --bg-label:#373766;
     --bg-label-hover:#fff;
@@ -32,11 +32,11 @@ body{
     opacity: 0;
 }
 .slider{
-    box-shadow: 0 0 5rem rgb(0 0 0 / 50%);
+    /* box-shadow: 0 0 5rem rgb(0 0 0 / 50%); */
     border-radius: 0.5rem;
     position: relative;
     overflow: hidden;
-    height: inherit;
+    height: 25rem;
     width: inherit;
 }
 .slides{
@@ -137,6 +137,21 @@ background:var(--bg-label-hover);
 #slide4:checked~.controll-wrapper .item4 {
     opacity: 1;
     margin-top: var(--margin-text-item3);
+}
+
+@media screen and (max-width:768px){
+    .wrapper{
+        padding: 0 1rem;
+        margin: 0 auto;
+    }
+    .controll-wrapper{
+        flex-direction: column-reverse;
+    }
+    .controls{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
 }
 
 
