@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 1rem;
+    
 }
 img{
     width: 100%;
@@ -109,6 +110,13 @@ background:var(--bg-label-hover);
 #slide4:checked~.controll-wrapper .controls label:nth-of-type(4) .control-item{
     border: 0.1rem solid var(--bg-label);
     background:none;
+}
+#slide1:active~.controll-wrapper .controls label:nth-of-type(1) .control-item,
+#slide2:active~.controll-wrapper .controls label:nth-of-type(2) .control-item,
+#slide3:active~.controll-wrapper .controls label:nth-of-type(3) .control-item,
+#slide4:active~.controll-wrapper .controls label:nth-of-type(4) .control-item {
+    transform: scale(1.4);
+    
 }
 #slide1:checked~.slider>.slide1,
 #slide2:checked~.slider>.slide2,
